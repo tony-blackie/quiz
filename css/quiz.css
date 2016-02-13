@@ -1,8 +1,130 @@
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:900|Roboto:400,100);
 
-body { background-color: #fff; padding: 20px; }
-
-#myQuiz {
-   font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 400;
+body {
+   background-color: #fff;
+   padding: 20px;
 }
 
+h1 {
+   display: none;
+}
+
+.my-quiz {
+   font-family: 'Roboto', sans-serif;
+   color: white;
+   font-size: 16px;
+   font-weight: 400;
+   width: 650px;
+   height: 650px;
+   position: relative;
+   overflow: hidden;
+   background: #000 url(../images/background.jpg) no-repeat 0 0;
+}
+
+.my-quiz h2 {
+   font-size: 3em;
+   margin: 0;
+   font-weight: 100;
+}
+
+.my-quiz h3 {
+   font-size: 2.4em;
+   margin: 0;
+   font-weight: 100;
+}
+
+.my-quiz p {
+   font-size: 2.4em;
+   margin: 0 0 14px 0;
+   font-weight: 100;
+}
+
+.my-quiz .btn {
+   display: inline-block;
+   cursor: pointer;
+   background-color: darkorange;
+   color: #FFF;
+   text-decoration: none;
+   padding: 5px 15px;
+   border-radius: 6px;
+
+}
+
+.my-quiz .intro {
+   position: absolute;
+   top: 225px;
+   left: 660px;
+}
+
+.my-quiz .intro p {
+   margin: 0 0 14px 0;
+}
+
+.my-quiz .question {
+   width: 550px;
+   position: absolute;
+   top: 220px;
+   left: 40px;
+}
+
+.my-quiz .question .text {
+   font-size: 1.6em;
+   margin: 0 0 20px 0;
+}
+
+.my-quiz .question .answer {
+   display: inline-block;
+   font-size: 1.1em;
+   width: 225px;
+   border: 2px solid rgba(138, 189, 102, .4);
+   border-radius: 6px;
+   padding: 10px;
+   margin: 0 15px 15px 0;
+   position: relative;
+}
+
+.my-quiz .question .selected {
+   border-color: #be4b16;
+}
+
+.my-quiz .question .correct {
+   border-color: #459a2e;
+}
+
+/*.my-quiz .question .answer::after {*/
+   /*content: '';*/
+   /*display: block;*/
+   /*width: 20px;*/
+   /*height: 20px;*/
+   /*background: #777 no-repeat 0 0;*/
+   /*background-size: 20px 20px;*/
+   /*position: absolute;*/
+   /*top: 5px;*/
+   /*right: 5px;*/
+/*}*/
+
+.my-quiz .question .selected::after {
+   content: '';
+   display: block;
+   width: 20px;
+   height: 20px;
+   background: #777 no-repeat 0 0;
+   background-size: 20px 20px;
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   background: url(../images/icon_incorrect.svg);
+}
+
+.my-quiz .question .correct::after {
+   content: '';
+   display: block;
+   width: 20px;
+   height: 20px;
+   background: #777 no-repeat 0 0;
+   background-size: 20px 20px;
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   background: url(../images/icon_correct.svg);
+}
